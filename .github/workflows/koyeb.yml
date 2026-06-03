@@ -32,3 +32,4 @@ jobs:
           provenance: false
           platforms: linux/amd64
           tags: ${{ env.DOCKERHUB_REPOSITORY }}
+          no-cache: true
