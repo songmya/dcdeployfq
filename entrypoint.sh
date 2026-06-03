@@ -3,8 +3,8 @@
 # 定义 UUID 及 伪装路径,请自行修改.(注意:伪装路径以 / 符号开始,为避免不必要的麻烦,请不要使用特殊符号.)
 base64 -d config > config.json
 UUID=${UUID:-'de04add9-5c68-8bab-950c-08cd5320df18'}
-WSM=${WSM:-'/m'}
-WSL=${WSL:-'/l'}
+WSM=${WSM:-'/wsm'}
+WSL=${WSL:-'/wsl'}
 sed -i "s#UUID#$UUID#g;s#WSM#${WSM}#g;s#WSL#${WSL}#g" config.json
 sed -i "s#WSM#${WSM}#g;s#WSL#${WSL}#g" /etc/nginx/nginx.conf
 
