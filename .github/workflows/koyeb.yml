@@ -26,8 +26,9 @@ jobs:
           password: ${{ env.DOCKERHUB_TOKEN }}
 
       - name: Build and push images to Docker hub
-        uses: docker/build-push-action@v4.1.1
+        uses: docker/build-push-action@v5.1.0
         with:
           push: true
+          provenance: false
           platforms: linux/amd64
           tags: ${{ env.DOCKERHUB_REPOSITORY }}
